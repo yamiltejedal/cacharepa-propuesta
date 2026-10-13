@@ -549,22 +549,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
   width: min(78vw, 290px); padding: 11px; border-radius: 44px;
   background: var(--rojo); box-shadow: var(--sombra); rotate: 3deg;
 }
-.pantalla { background: var(--papel); border-radius: 34px; overflow: hidden; padding: 0 0 16px; min-height: 520px; display: grid; align-content: start; gap: 10px; }
-.pantalla__top { background: var(--amarillo); padding: 22px 16px 10px; display: grid; place-items: center; border-bottom: 3px solid var(--rojo); }
-.pantalla__top img { width: 120px; height: auto; }
-.pantalla__hola { margin: 4px 16px 0; font-family: var(--display); font-size: 1.45rem; line-height: 1.1; color: var(--rojo); }
-.pantalla__chips { display: flex; gap: 6px; padding: 0 16px; overflow: hidden; }
-.pantalla__chips span { flex: none; padding: .3em .8em; font-family: var(--sub); font-size: .82rem; color: var(--rojo); border: 2px solid var(--rojo); border-radius: var(--radio-pildora); }
-.pantalla__chips .on { background: var(--rojo); color: var(--amarillo); }
-.pantalla__fila { display: grid; grid-template-columns: 78px 1fr; gap: 10px; align-items: center; margin: 0 16px; padding: 8px; border-radius: 18px; background: var(--blanco); border: 2px solid var(--rojo); }
-.pantalla__fila img { width: 78px; height: 66px; object-fit: cover; border-radius: 12px; }
-.pantalla__fila b { display: block; font-family: var(--sub); font-weight: 400; font-size: .92rem; line-height: 1.2; color: var(--rojo); }
-.pantalla__fila span { font-family: var(--display); font-size: 1.05rem; color: var(--rojo); }
-.pantalla__promo { margin: 0 16px; padding: 10px 14px; border-radius: 16px; background: var(--amarillo); border: 2px dashed var(--rojo); display: grid; line-height: 1.2; }
-.pantalla__promo b { font-family: var(--display); font-weight: 400; font-size: 1.15rem; color: var(--rojo); }
-.pantalla__promo span { font-size: .9rem; color: var(--tinta); }
-.pantalla__btn { margin: 4px 16px 0; padding: .7em; text-align: center; font-family: var(--sub); font-size: 1.05rem; background: var(--rojo); color: var(--amarillo); border-radius: var(--radio-pildora); }
-.telefono__ilus { margin-top: 18px; font-size: .9rem; color: var(--tinta); }
+.pantalla { display: block; width: 100%; height: auto; border-radius: 34px; background: var(--blanco); }
 .btn--solo { flex: 1 1 auto !important; }
 @media (min-width: 860px) {
   .app__in { grid-template-columns: 1.1fr .9fr; }
@@ -800,19 +785,10 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
         <a class="btn btn--rojo" href="#app" data-app><svg class="i" aria-hidden="true"><use href="#i-celular"/></svg>Descarga nuestra App</a>
         <p class="app__nota" data-app-nota>Muy pronto en App Store y Google Play.</p>
       </div>
-      <div class="telefono" role="img" aria-label="Pantalla de ejemplo de la App de CachArepa">
+      <div class="telefono">
         <div class="telefono__marco">
-          <div class="pantalla">
-            <div class="pantalla__top"><img src="assets/img/logo.png" alt="" width="964" height="270"></div>
-            <p class="pantalla__hola">¿Qué se te antoja hoy?</p>
-            <div class="pantalla__chips"><span class="on">Cachapas</span><span>Arepas</span><span>Empanadas</span><span>Antojitos</span></div>
-            <div class="pantalla__fila"><img src="assets/img/cachapa-queso-mano.webp" width="1100" height="709" alt=""><div><b>Cachapa de queso de mano</b><span>RD$595</span></div></div>
-            <div class="pantalla__fila"><img src="assets/img/arepa-pabellon.webp" width="1100" height="1650" alt=""><div><b>Arepa de pabellón</b><span>RD$620</span></div></div>
-            <div class="pantalla__promo"><b>Promociones</b><span>Combos desde RD$395</span></div>
-            <div class="pantalla__btn">Hacer mi pedido</div>
-          </div>
+          <img class="pantalla" src="assets/img/app-captura.webp" width="591" height="1202" alt="Catálogo de la App de CachArepa con categorías, productos y precios" loading="lazy">
         </div>
-        <span class="telefono__ilus">Imagen ilustrativa</span>
       </div>
     </div>
   </section>
