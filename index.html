@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CachArepa · Propuesta de rediseño v3</title>
+<title>CachArepa · Cachapas, arepas, tequeños y más</title>
 <meta name="description" content="Cachapas, arepas, tequeños y más. El auténtico sabor venezolano en 10 sucursales de Santo Domingo.">
 <meta name="theme-color" content="#F1E621">
-<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://cacharepa.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CachArepa">
@@ -325,7 +325,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
   background: rgb(0 0 0 / .14); border-radius: var(--radio);
 }
 .tablero { flex-direction: column; align-items: stretch; gap: 14px; }
-.tablero__luces { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.tablero__luces { display: flex; flex-wrap: wrap; gap: 0 16px; align-items: center; }
 .tablero__resumen { flex-basis: 100%; font-size: 1.2rem; color: var(--blanco); }
 .tablero__cerca { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 14px; border-top: 2px solid rgb(255 255 255 / .12); }
 .btn--cerca { background: var(--amarillo); border-color: var(--amarillo); color: var(--rojo); }
@@ -336,7 +336,9 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
 .suc__cerca { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: .3em .8em; font-size: .95rem; border-radius: var(--radio-pildora); background: var(--rojo); color: var(--amarillo); }
 .suc__km { color: var(--rojo); white-space: nowrap; }
 .tablero .luz { width: 14px; height: 14px; }
-.tablero a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--amarillo); min-height: 32px; }
+.tablero a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--amarillo); min-height: 44px; }
+.luz.pendiente { background: transparent; box-shadow: inset 0 0 0 2px currentColor; opacity: .7; }
+.bajada a { display: inline-flex; align-items: center; min-height: 44px; }
 .tablero a:hover { text-decoration: underline; }
 .lista { display: grid; gap: 18px; margin: 0; padding: 0; list-style: none; }
 .suc {
@@ -649,9 +651,9 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
         </div>
       </div>
       <div class="mesa" aria-hidden="true">
-        <figure class="print print--main" data-rota="main"><img src="assets/img/cachapa-mano.jpg" width="1100" height="1402" alt="" style="object-position:50% 70%"></figure>
-        <figure class="print print--side" data-rota="side"><img src="assets/img/arepa-tequenos.jpg" width="960" height="1200" alt=""></figure>
-        <figure class="print print--tercera" data-rota="tercera"><img src="assets/img/tequenos.jpg" width="1100" height="1466" alt="" loading="lazy" style="object-position:50% 70%"></figure>
+        <figure class="print print--main" data-rota="main"><img src="assets/img/cachapa-mano.webp" width="1100" height="1402" alt="" style="object-position:50% 70%"></figure>
+        <figure class="print print--side" data-rota="side"><img src="assets/img/arepa-tequenos.webp" width="960" height="1200" alt=""></figure>
+        <figure class="print print--tercera" data-rota="tercera"><img src="assets/img/tequenos.webp" width="1100" height="1466" alt="" loading="lazy" style="object-position:50% 70%"></figure>
         <p class="ticket"><strong data-hoy-titulo>Hoy</strong><span data-hoy-texto>abiertos de 7:00 a.m. a 12:00 a.m.</span></p>
       </div>
     </div>
@@ -673,7 +675,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </div>
 
       <article class="plato" role="tabpanel" id="p-cachapas" aria-labelledby="t-cachapas">
-        <figure class="plato__foto"><div class="print"><img src="assets/img/cachapa-mesa.jpg" alt="Cachapa de pollo y queso de mano con jugo en el vaso de CachArepa" loading="lazy" style="object-position:50% 72%"></div></figure>
+        <figure class="plato__foto"><div class="print"><img src="assets/img/cachapa-mesa.webp" width="1100" height="1467" alt="Cachapa de pollo y queso de mano con jugo en el vaso de CachArepa" loading="lazy" style="object-position:50% 72%"></div></figure>
         <div class="carta">
           <h3>Cachapas</h3>
           <p class="carta__nota">Masa de maíz dulce a la plancha, doblada con tu queso favorito.</p>
@@ -692,7 +694,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </article>
 
       <article class="plato plato--inv" role="tabpanel" id="p-arepas" aria-labelledby="t-arepas" hidden>
-        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/arepa-chicharron.jpg" alt="Arepa rellena de chicharrón guisado y queso blanco" loading="lazy" style="object-position:50% 45%"></div></figure>
+        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/arepa-chicharron.webp" width="1100" height="1375" alt="Arepa rellena de chicharrón guisado y queso blanco" loading="lazy" style="object-position:50% 45%"></div></figure>
         <div class="carta">
           <h3>Arepas</h3>
           <p class="carta__nota">Arepa de maíz, abierta y rellena al momento.</p>
@@ -702,9 +704,9 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
           <ul class="especiales">
             <li class="especial especial--fija"><span class="especial__btn"><b>Arepa 3 golpes</b><span class="especial__precio">RD$375</span></span></li>
             <li class="especial"><button type="button" class="especial__btn" aria-expanded="false" aria-controls="esp-rp"><b><svg class="estrella" aria-hidden="true"><use href="#i-estrella"/></svg>Arepa Reina Pepiada y queso</b><span class="especial__precio">RD$495</span><svg class="i especial__flecha" aria-hidden="true"><use href="#i-flecha"/></svg></button>
-              <div class="especial__mas" id="esp-rp"><div><div class="especial__in"><img src="assets/img/reina-pepiada.jpg" alt="Arepa Reina Pepiada con pollo, aguacate y queso" loading="lazy" style="object-position:50% 50%"><p>Pollo con aguacate y mayonesa, con queso blanco.</p></div></div></div></li>
+              <div class="especial__mas" id="esp-rp"><div><div class="especial__in"><img src="assets/img/reina-pepiada.webp" width="1100" height="733" alt="Arepa Reina Pepiada con pollo, aguacate y queso" loading="lazy" style="object-position:50% 50%"><p>Pollo con aguacate y mayonesa, con queso blanco.</p></div></div></div></li>
             <li class="especial"><button type="button" class="especial__btn" aria-expanded="false" aria-controls="esp-pb"><b>Arepa de pabellón</b><span class="especial__precio">RD$620</span><svg class="i especial__flecha" aria-hidden="true"><use href="#i-flecha"/></svg></button>
-              <div class="especial__mas" id="esp-pb"><div><div class="especial__in"><img src="assets/img/arepa-pabellon.jpg" alt="Arepa de pabellón con res mechada, habichuelas negras y plátano maduro" loading="lazy" style="object-position:50% 55%"><p>Res mechada, habichuelas negras y plátano maduro.</p></div></div></div></li>
+              <div class="especial__mas" id="esp-pb"><div><div class="especial__in"><img src="assets/img/arepa-pabellon.webp" width="1100" height="1650" alt="Arepa de pabellón con res mechada, habichuelas negras y plátano maduro" loading="lazy" style="object-position:50% 55%"><p>Res mechada, habichuelas negras y plátano maduro.</p></div></div></div></li>
           </ul>
           <h4>Arepas</h4>
           <div class="base"><div class="base__cab"><span class="base__nombre">Arepa de queso blanco</span><b class="p">RD$375</b></div>
@@ -718,7 +720,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </article>
 
       <article class="plato" role="tabpanel" id="p-empanadas" aria-labelledby="t-empanadas" hidden>
-        <figure class="plato__foto"><div class="print"><img src="assets/img/empanada.jpg" alt="Empanadas venezolanas con una Maltín" loading="lazy" style="object-position:50% 55%"></div></figure>
+        <figure class="plato__foto"><div class="print"><img src="assets/img/empanada.webp" width="1100" height="1648" alt="Empanadas venezolanas con una Maltín" loading="lazy" style="object-position:50% 55%"></div></figure>
         <div class="carta">
           <h3>Empanadas venezolanas</h3>
           <p class="carta__nota">Masa de maíz frita, bien dorada por fuera.</p>
@@ -728,7 +730,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </article>
 
       <article class="plato plato--inv" role="tabpanel" id="p-picar" aria-labelledby="t-picar" hidden>
-        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/tequenos-queso.jpg" alt="Tequeños de queso" loading="lazy" style="object-position:50% 70%"></div></figure>
+        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/tequenos-queso.webp" width="1100" height="1650" alt="Tequeños de queso" loading="lazy" style="object-position:50% 70%"></div></figure>
         <div class="carta">
           <h3>Antojitos venezolanos</h3>
           <p class="carta__nota">Para acompañar o para compartir.</p>
@@ -738,7 +740,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </article>
 
       <article class="plato" role="tabpanel" id="p-adicionales" aria-labelledby="t-adicionales" hidden>
-        <figure class="plato__foto"><div class="print"><img src="assets/img/cachapa-queso-mano.jpg" alt="Cachapa de queso de mano con salsas" loading="lazy" style="object-position:50% 50%"></div></figure>
+        <figure class="plato__foto"><div class="print"><img src="assets/img/cachapa-queso-mano.webp" width="1100" height="709" alt="Cachapa de queso de mano con salsas" loading="lazy" style="object-position:50% 50%"></div></figure>
         <div class="carta">
           <h3>Adicionales</h3>
           <p class="carta__nota">Agrégale a tu cachapa, arepa o empanada.</p>
@@ -750,7 +752,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       </article>
 
       <article class="plato plato--inv" role="tabpanel" id="p-bebidas" aria-labelledby="t-bebidas" hidden>
-        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/arepa-tequenos.jpg" alt="Arepa con aguacate, tequeños y el vaso amarillo de CachArepa" loading="lazy" style="object-position:0% 30%"></div></figure>
+        <figure class="plato__foto"><div class="print print--alt"><img src="assets/img/arepa-tequenos.webp" width="960" height="1200" alt="Arepa con aguacate, tequeños y el vaso amarillo de CachArepa" loading="lazy" style="object-position:0% 30%"></div></figure>
         <div class="carta">
           <h3>Bebidas y postre</h3>
           <h4>Bebidas</h4>
@@ -804,8 +806,8 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
             <div class="pantalla__top"><img src="assets/img/logo.png" alt="" width="964" height="270"></div>
             <p class="pantalla__hola">¿Qué se te antoja hoy?</p>
             <div class="pantalla__chips"><span class="on">Cachapas</span><span>Arepas</span><span>Empanadas</span><span>Antojitos</span></div>
-            <div class="pantalla__fila"><img src="assets/img/cachapa-queso-mano.jpg" alt=""><div><b>Cachapa de queso de mano</b><span>RD$595</span></div></div>
-            <div class="pantalla__fila"><img src="assets/img/arepa-pabellon.jpg" alt=""><div><b>Arepa de pabellón</b><span>RD$620</span></div></div>
+            <div class="pantalla__fila"><img src="assets/img/cachapa-queso-mano.webp" width="1100" height="709" alt=""><div><b>Cachapa de queso de mano</b><span>RD$595</span></div></div>
+            <div class="pantalla__fila"><img src="assets/img/arepa-pabellon.webp" width="1100" height="1650" alt=""><div><b>Arepa de pabellón</b><span>RD$620</span></div></div>
             <div class="pantalla__promo"><b>Promociones</b><span>Combos desde RD$395</span></div>
             <div class="pantalla__btn">Hacer mi pedido</div>
           </div>
@@ -817,7 +819,7 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
 
   <section class="seccion" id="en-casa" aria-labelledby="casa-titulo">
     <div class="wrap casa">
-      <figure class="plato__foto" style="margin:0"><div class="print"><img src="assets/img/congelados.jpg" width="1023" height="1364" alt="Cajas de arepas, cachapas y empanadas congeladas de CachArepa sobre una mesa" loading="lazy"></div></figure>
+      <figure class="plato__foto" style="margin:0"><div class="print"><img src="assets/img/congelados.webp" width="1023" height="1364" alt="Cajas de arepas, cachapas y empanadas congeladas de CachArepa sobre una mesa" loading="lazy"></div></figure>
       <div>
         <h2 class="titulo" id="casa-titulo">CachArepa en tu casa</h2>
         <p class="bajada">Congelados listos para preparar cuando quieras.</p>
@@ -850,12 +852,12 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
       <p class="bajada"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener">@cacharepa.rd</a></p>
     </div>
     <ul class="insta" data-insta aria-label="Últimas publicaciones de Instagram">
-      <li data-id="local-0"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/cachapa-mesa.jpg" width="900" height="1100" alt="Cachapa de pollo con queso y jugo" loading="lazy"></a></li>
-      <li data-id="local-1"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/arepa-chicharron.jpg" width="900" height="1100" alt="Arepa de chicharrón guisado con queso" loading="lazy"></a></li>
-      <li data-id="local-2"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/tequenos-queso.jpg" width="900" height="1100" alt="Tequeños de queso" loading="lazy"></a></li>
-      <li data-id="local-3"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/cachapa-mano.jpg" width="900" height="1100" alt="Cachapa servida por el equipo de CachArepa" loading="lazy"></a></li>
-      <li data-id="local-4"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/arepa-pabellon.jpg" width="900" height="1100" alt="Arepa de pabellón" loading="lazy"></a></li>
-      <li data-id="local-5"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/congelados.jpg" width="900" height="1100" alt="Productos congelados CachArepa" loading="lazy"></a></li>
+      <li data-id="local-0"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/cachapa-mesa.webp" width="900" height="1100" alt="Cachapa de pollo con queso y jugo" loading="lazy"></a></li>
+      <li data-id="local-1"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/arepa-chicharron.webp" width="900" height="1100" alt="Arepa de chicharrón guisado con queso" loading="lazy"></a></li>
+      <li data-id="local-2"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/tequenos-queso.webp" width="900" height="1100" alt="Tequeños de queso" loading="lazy"></a></li>
+      <li data-id="local-3"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/cachapa-mano.webp" width="900" height="1100" alt="Cachapa servida por el equipo de CachArepa" loading="lazy"></a></li>
+      <li data-id="local-4"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/arepa-pabellon.webp" width="900" height="1100" alt="Arepa de pabellón" loading="lazy"></a></li>
+      <li data-id="local-5"><a href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><img src="assets/img/congelados.webp" width="900" height="1100" alt="Productos congelados CachArepa" loading="lazy"></a></li>
     </ul>
     <div class="wrap">
       <a class="btn btn--rojo" href="https://www.instagram.com/cacharepa.rd/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>Ver más en Instagram</a>
@@ -897,9 +899,9 @@ svg.i { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentCo
     </div>
   </div>
   <div class="visor__paginas">
-    <figure><img src="assets/img/menu/menu-1-cachapas.jpg" width="1500" height="2000" alt="Menú: cachapas en combo, cachapas y precios" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-1-cachapas.jpg" download="Menu-CachArepa-1-Cachapas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 1</a></figcaption></figure>
-    <figure><img src="assets/img/menu/menu-2-arepas.jpg" width="1500" height="2000" alt="Menú: arepas en combos, arepas y precios" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-2-arepas.jpg" download="Menu-CachArepa-2-Arepas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 2</a></figcaption></figure>
-    <figure><img src="assets/img/menu/menu-3-antojitos-bebidas.jpg" width="1500" height="2000" alt="Menú: antojitos, empanadas, postres, adicionales, bebidas y cervezas" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-3-antojitos-bebidas.jpg" download="Menu-CachArepa-3-Antojitos-Bebidas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 3</a></figcaption></figure>
+    <figure><img src="assets/img/menu/menu-1-cachapas.webp" width="1500" height="2000" alt="Menú: cachapas en combo, cachapas y precios" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-1-cachapas.jpg" download="Menu-CachArepa-1-Cachapas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 1</a></figcaption></figure>
+    <figure><img src="assets/img/menu/menu-2-arepas.webp" width="1500" height="2000" alt="Menú: arepas en combos, arepas y precios" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-2-arepas.jpg" download="Menu-CachArepa-2-Arepas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 2</a></figcaption></figure>
+    <figure><img src="assets/img/menu/menu-3-antojitos-bebidas.webp" width="1500" height="2000" alt="Menú: antojitos, empanadas, postres, adicionales, bebidas y cervezas" loading="lazy"><figcaption><a class="btn btn--sm" href="assets/img/menu/menu-3-antojitos-bebidas.jpg" download="Menu-CachArepa-3-Antojitos-Bebidas.jpg"><svg class="i" aria-hidden="true"><use href="#i-descargar"/></svg>Descargar página 3</a></figcaption></figure>
   </div>
 </dialog>
 
@@ -924,34 +926,34 @@ const TODOS = [0, 1, 2, 3, 4, 5, 6];
 const SUCURSALES = [
   { nombre: "Av. Winston Churchill", direccion: "Av. Winston Churchill #202, Julieta Morales",
     tels: [["Llamar", "8097845197"]], mapa: "https://g.page/CachArepa-Churchill", geo: [18.47616, -69.94397],
-    horario: [{ dias: [1, 2, 3, 4], abre: "07:00", cierra: "25:00" }, { dias: [5, 6], abre: "07:00", cierra: "26:00" }, { dias: [0], abre: "07:00", cierra: "25:00" }] },
+    horario: [{ dias: [0, 1, 2, 3, 4], abre: "07:00", cierra: "25:00" }, { dias: [5, 6], abre: "07:00", cierra: "27:00" }] },
   { nombre: "Av. Núñez de Cáceres", direccion: "Av. Núñez de Cáceres, Marginal #360, El Millón",
     tels: [["Llamar", "8097923179"]], mapa: "https://g.page/CachArepa", geo: [18.46096, -69.95805],
-    horario: [{ dias: [1, 2, 3, 4], abre: "07:00", cierra: "24:00" }, { dias: [5, 6, 0], abre: "07:00", cierra: "25:00" }] },
+    horario: [{ dias: [0, 1, 2, 3, 4], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "25:00" }] },
   { nombre: "Av. Máximo Gómez", direccion: "Av. Máximo Gómez #29, Gazcue",
     tels: [["Llamar", "8096927149"]], mapa: "https://g.page/CachArepa-MaximoG", geo: [18.46601, -69.91028],
-    horario: [{ dias: [0, 1, 2, 3, 4, 5, 6], abre: "07:00", cierra: "26:00" }] },
+    horario: [{ dias: [0, 1, 2, 3, 4], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "25:00" }] },
   { nombre: "Av. Sarasota", direccion: "Av. Sarasota #104, Bella Vista",
     tels: [["Llamar", "8097709696"]], mapa: "https://maps.app.goo.gl/6AUP3wMpnfS5LaTY6", geo: [18.45084, -69.94828],
-    horario: [{ dias: [1, 2, 3, 4, 0], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "25:00" }] },
+    horario: [{ dias: [0, 1, 2, 3, 4], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "25:00" }] },
   { nombre: "Sambil Santo Domingo", direccion: "Sambil, Nivel Feria, Local F-7, Av. John F. Kennedy",
     tels: [["Llamar", "8295474440"]], mapa: "https://g.page/Cacharepa-sambil", geo: [18.48271, -69.91204],
-    horario: [{ dias: [1, 2, 3, 4, 5, 6], abre: "11:00", cierra: "22:00" }, { dias: [0], abre: "11:00", cierra: "21:00" }] },
+    horario: [{ dias: TODOS, abre: "08:00", cierra: "23:00" }] },
   { nombre: "Zona Colonial", direccion: "Calle El Conde #255, Zona Colonial",
     tels: [["Llamar", "8094668602"]], mapa: "https://goo.gl/maps/uUuUtddjSxZjGHHQ8", geo: [18.47304, -69.88665],
-    horario: [{ dias: [0, 1, 2, 3, 4, 5, 6], abre: "07:00", cierra: "23:50" }] },
+    horario: [{ dias: [2, 3, 4, 5, 6, 0], abre: "08:00", cierra: "23:00" }] },
   { nombre: "San Isidro", direccion: "Autopista de San Isidro, al lado de Plaza Villa España",
     tels: [["Llamar", "8098322756"]], mapa: "https://goo.gl/maps/CG3ioZsxJtR6EuBK6", geo: [18.48709, -69.83457],
-    horario: [{ dias: [0, 1, 2, 3, 4, 5, 6], abre: "07:00", cierra: "24:00" }] },
+    horario: [{ dias: TODOS, abre: "07:00", cierra: "24:00" }] },
   { nombre: "Tiradentes", direccion: "Av. Tiradentes esq. Av. 27 de Febrero",
     tels: [["Llamar", "8093759980"]], mapa: "https://goo.gl/maps/wKMo2EUb1KFX16JDA", geo: [18.46961, -69.92386],
-    horario: [{ dias: [1, 2, 3, 4, 0], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "26:00" }] },
+    horario: [{ dias: [0, 1, 2, 3, 4], abre: "07:00", cierra: "24:00" }, { dias: [5, 6], abre: "07:00", cierra: "25:00" }] },
   { nombre: "Camino Chiquito", direccion: "Calle Camino Chiquito, Arroyo Hondo",
     tels: [["Llamar", "8098228584"]], mapa: "https://maps.google.com/?cid=1035628441306032070", geo: [18.49236, -69.93582],
-    horario: [{ dias: [0, 1, 2, 3, 4, 5, 6], abre: "07:00", cierra: "23:00" }] },
+    horario: [{ dias: TODOS, abre: "07:00", cierra: "23:00" }] },
   { nombre: "Plaza Duarte", direccion: "Plaza Duarte (Carrefour), Km 10 1/2",
     tels: [], mapa: "https://maps.google.com/?cid=9754051320387919874", geo: [18.48895, -69.97862],
-    horario: [] },
+    horario: [{ dias: TODOS, abre: "08:00", cierra: "22:00" }] },
 ];
 
 /* Aviso en la parte de arriba de la página (feriados, cambios, promociones).
@@ -1009,6 +1011,7 @@ function enSD(fecha) {
 }
 const ahoraSD = () => enSD(new Date());
 const mananaSD = () => enSD(new Date(Date.now() + 864e5));
+const ayerSD = () => enSD(new Date(Date.now() - 864e5));
 
 function especialDe(s, fecha) {
   return DIAS_ESPECIALES.find((e) => e.fecha === fecha && (!e.solo || e.solo.includes(s.nombre)));
@@ -1022,6 +1025,10 @@ function turnoEn(s, momento) {
 function estado(s) {
   if (!s.horario.length) return { abierta: false, texto: "Horario por confirmar", sinDatos: true };
   const hoy = ahoraSD();
+  // Pasada la medianoche puede seguir corriendo el turno de ayer (cierra "25:00" = 1:00 a.m.).
+  const ta = turnoEn(s, ayerSD());
+  if (ta && hoy.min + 1440 < aMin(ta.cierra))
+    return { abierta: true, texto: `${ta.especial ? "Horario especial · " : "Abierta · "}cierra ${hora12(ta.cierra)}` };
   const t = turnoEn(s, hoy);
   const esp = especialDe(s, hoy.fecha);
   if (t && hoy.min >= aMin(t.abre) && hoy.min < aMin(t.cierra))
@@ -1036,8 +1043,46 @@ function horarioTexto(s) {
   return s.horario.map((h) => {
     const d = h.dias.length === 7 ? "Todos los días" : h.dias.length === 1 ? DIAS[h.dias[0]] : `${DIAS[h.dias[0]]}–${DIAS[h.dias[h.dias.length - 1]]}`;
     return `${d}, ${hora12(h.abre)} – ${hora12(h.cierra)}`;
-  }).join("<br>");
+  }).concat(TODOS.filter((d) => !turnoDe(s, d)).map((d) => `${DIAS[d]}, cerrado`)).join("<br>");
 }
+
+/* Ficha para Google (datos estructurados): se arma sola con los datos de SUCURSALES. */
+(function fichaGoogle() {
+  const web = "https://cacharepa.com/";
+  const diaEn = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const h24 = (h) => { const [a, b] = h.split(":").map(Number); return `${String(a % 24).padStart(2, "0")}:${String(b).padStart(2, "0")}`; };
+  const ficha = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: "CachArepa",
+    url: web,
+    logo: web + "assets/img/logo.png",
+    image: web + "assets/img/og.jpg",
+    servesCuisine: "Venezolana",
+    priceRange: "$",
+    menu: web + "assets/menu-cacharepa.pdf",
+    email: "mercadeo@cacharepa.com",
+    sameAs: [INSTAGRAM_PERFIL],
+    department: SUCURSALES.map((s) => ({
+      "@type": "Restaurant",
+      name: `CachArepa ${s.nombre.replace("Av. ", "")}`,
+      address: { "@type": "PostalAddress", streetAddress: s.direccion, addressLocality: "Santo Domingo", addressCountry: "DO" },
+      geo: { "@type": "GeoCoordinates", latitude: s.geo[0], longitude: s.geo[1] },
+      hasMap: s.mapa,
+      ...(s.tels.length ? { telephone: `+1-${telBonito(s.tels[0][1])}` } : {}),
+      openingHoursSpecification: s.horario.map((h) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: h.dias.map((d) => diaEn[d]),
+        opens: h.abre,
+        closes: h24(h.cierra),
+      })),
+    })),
+  };
+  const el = document.createElement("script");
+  el.type = "application/ld+json";
+  el.textContent = JSON.stringify(ficha);
+  document.head.appendChild(el);
+})();
 
 /* Cercanía: distancia en línea recta desde la ubicación del cliente. */
 let miPosicion = null;
@@ -1056,6 +1101,8 @@ const corto = (n) => n.replace("Av. ", "").replace(" Santo Domingo", "");
 function pintar() {
   const est = SUCURSALES.map(estado);
   const abiertas = est.filter((e) => e.abierta).length;
+  const conHorario = est.filter((e) => !e.sinDatos).length;
+  const luz = (e) => `<span class="luz${e.abierta ? " on" : e.sinDatos ? " pendiente" : ""}" aria-hidden="true"></span>`;
   const dist = SUCURSALES.map((s) => (miPosicion ? km(miPosicion, s.geo) : null));
   // Con ubicación: por distancia. Sin ubicación: el orden de arriba.
   const orden = SUCURSALES.map((s, i) => i);
@@ -1067,7 +1114,7 @@ function pintar() {
       ${i === cercana ? `<span class="suc__cerca">${ico("i-ubicacion")}La más cerca de ti</span>` : ""}
       <div>
         <h3>${esc(s.nombre)}</h3>
-        <span class="suc__estado${est[i].abierta ? " on" : ""}"><span class="luz${est[i].abierta ? " on" : ""}" aria-hidden="true"></span>${est[i].texto}</span>
+        <span class="suc__estado${est[i].abierta ? " on" : ""}">${luz(est[i])}${est[i].texto}</span>
       </div>
       <dl>
         <dt>${ico("i-mapa")}<span class="sr">Dirección</span></dt><dd>${esc(s.direccion)}${dist[i] != null ? ` <span class="suc__km num">· ${kmTexto(dist[i])}</span>` : ""}</dd>
@@ -1080,8 +1127,8 @@ function pintar() {
     </li>`; }).join("");
 
   document.querySelector("[data-tablero-luces]").innerHTML =
-    `<span class="tablero__resumen num">${abiertas === 0 ? "Ahora mismo todas están cerradas" : `${abiertas} de ${SUCURSALES.length} abiertas ahora`}</span>` +
-    SUCURSALES.map((s, i) => `<a href="#suc-${i}"><span class="luz${est[i].abierta ? " on" : ""}" aria-hidden="true"></span>${esc(corto(s.nombre))}<span class="sr">: ${est[i].abierta ? "abierta" : "cerrada"}</span></a>`).join("");
+    `<span class="tablero__resumen num">${abiertas === 0 ? "Ahora mismo todas están cerradas" : `${abiertas} de ${conHorario} abiertas ahora`}</span>` +
+    SUCURSALES.map((s, i) => `<a href="#suc-${i}">${luz(est[i])}${esc(corto(s.nombre))}<span class="sr">: ${est[i].abierta ? "abierta" : est[i].sinDatos ? "horario por confirmar" : "cerrada"}</span></a>`).join("");
 
   // Hoja de llamar: la más cercana primero si hay ubicación; si no, abiertas primero.
   const ordenHoja = miPosicion ? orden : SUCURSALES.map((s, i) => i).sort((a, b) => est[b].abierta - est[a].abierta);
@@ -1152,9 +1199,9 @@ const reiniciar = (el, clase) => { el.classList.remove(clase); void el.offsetWid
 
 /* Portada: cada foto rota a su propio ritmo; la nueva cae sobre la anterior. */
 const ROTA = {
-  main: [["cachapa-mano.jpg", "50% 70%"], ["cachapa-3golpes.jpg", "50% 60%"], ["cachapa-mesa.jpg", "50% 72%"], ["arepa-pabellon.jpg", "50% 55%"], ["cachapa-queso-mano.jpg", "40% 50%"], ["arepa-chicharron.jpg", "50% 45%"]],
-  side: [["arepa-tequenos.jpg", "50% 50%"], ["reina-pepiada.jpg", "55% 50%"], ["arepa-queso-pollo.jpg", "50% 50%"], ["arepas-salsas.jpg", "50% 50%"], ["empanada.jpg", "50% 55%"], ["arepa-salsa.jpg", "50% 40%"]],
-  tercera: [["tequenos.jpg", "50% 70%"], ["tequenos-queso.jpg", "50% 70%"], ["empanada-corte.jpg", "50% 50%"], ["cachapa-blanca-coca.jpg", "50% 50%"], ["congelados.jpg", "50% 60%"]],
+  main: [["cachapa-mano.webp", "50% 70%"], ["cachapa-3golpes.webp", "50% 60%"], ["cachapa-mesa.webp", "50% 72%"], ["arepa-pabellon.webp", "50% 55%"], ["cachapa-queso-mano.webp", "40% 50%"], ["arepa-chicharron.webp", "50% 45%"]],
+  side: [["arepa-tequenos.webp", "50% 50%"], ["reina-pepiada.webp", "55% 50%"], ["arepa-queso-pollo.webp", "50% 50%"], ["arepas-salsas.webp", "50% 50%"], ["empanada.webp", "50% 55%"], ["arepa-salsa.webp", "50% 40%"]],
+  tercera: [["tequenos.webp", "50% 70%"], ["tequenos-queso.webp", "50% 70%"], ["empanada-corte.webp", "50% 50%"], ["cachapa-blanca-coca.webp", "50% 50%"], ["congelados.webp", "50% 60%"]],
 };
 (function rotarFotos() {
   const mesa = document.querySelector(".mesa");
@@ -1280,6 +1327,20 @@ hoja.addEventListener("click", (e) => { if (e.target === hoja) hoja.close(); });
     el.classList.add("por-revelar");
     io.observe(el);
   });
+  // Saltos con el menú o anclas: lo que quedó arriba sin pasar por pantalla aparece ya visible.
+  let pendiente = false;
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(() => {
+      pendiente = false;
+      document.querySelectorAll(".por-revelar").forEach((el) => {
+        if (el.getBoundingClientRect().bottom > 0) return;
+        el.classList.remove("por-revelar");
+        io.unobserve(el);
+      });
+    });
+  }, { passive: true });
 })();
 
 /* Visor del menú */
